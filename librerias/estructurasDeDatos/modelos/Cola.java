@@ -17,6 +17,8 @@ public interface Cola<E> {
      * el primero en orden de insercion 
      */
     E primero();
+
+    int talla();
     
     /** comprueba si una Cola esta vacia 
      */

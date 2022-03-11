@@ -1,4 +1,4 @@
-//package ejemplos.biblioteca;
+package ejemplos.biblioteca;
 /*
  * Termino: clase de la Clave del Map que representa un termino del 
  * Indice Analitico de una Biblioteca Digital.

@@ -1,12 +1,12 @@
-//package ejemplos.tema1;
+package ejemplos.tema1;
 
-import eda.librerias.estructurasDeDatos.modelos.Cola;
-//import librerias.estructurasDeDatos.lineales.ArrayCola;
+import librerias.estructurasDeDatos.modelos.Cola;
+import librerias.estructurasDeDatos.lineales.ArrayCola;
 
 public class TestEDACola {
   public static void main(String[] args) {      
-      Cola q = new ArrayCola();
-      System.out.println("Creada una Cola con " + q.talla 
+      Cola<Integer> q = new ArrayCola<Integer>();
+      System.out.println("Creada una Cola con " + q.talla()
           + " Integer, q = " + q.toString());
       q.encolar(10); 
       q.encolar(20); 

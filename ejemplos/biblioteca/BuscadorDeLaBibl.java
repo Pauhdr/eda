@@ -201,6 +201,10 @@ public class BuscadorDeLaBibl {
      */
     public ListaConPI<Termino> hapax() {
         /* COMPLETAR */
-        return /*CORREGIR*/ null;
+        ListaConPI<Termino> keys=this.index.claves();
+        for(keys.inicio();!keys.esFin();keys.siguiente()){
+            if(this.index.recuperar(keys.recuperar()).talla()!=1) keys.eliminar();
+        }
+        return keys;
     }
 }    

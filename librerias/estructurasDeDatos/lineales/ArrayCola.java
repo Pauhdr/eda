@@ -62,6 +62,10 @@ public class ArrayCola<E> implements Cola<E> {
     
     /** comprueba si una Cola esta vacia **/
     public boolean esVacia() { return talla == 0; }
+
+    public int talla(){
+        return this.talla;
+    }
     
    /** obtiene un String con los Elementos de una Cola en orden FIFO, 
     *  o de insercion, y con el formato que se usa en el estandar de Java. 
