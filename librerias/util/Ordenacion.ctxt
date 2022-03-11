@@ -1,0 +1,34 @@
+#BlueJ class context
+comment0.target=Ordenacion
+comment0.text=\ \ \r\n\ \ The\ class\ Ordenacion\ contains\:\ \r\n\ \ -\ The\ implementation\ of\ the\ in-situ\ D&C\ sorting\ algorithms\ \r\n\ \ \ \ Quick\ Sort\ and\ Merge\ Sort.\ \ \r\n\ \ -\ A\ method\ to\ check\ if\ two\ given\ generic-type\ arrays\ are\ equal\ \r\n\ \ \ \r\n\ @author\ (EDA)\ \ \r\n\ @version\ (Year\ 2017-2018)\ \r\n
+comment1.params=a
+comment1.target=void\ quickSort(java.lang.Comparable[])
+comment1.text=\ \ \r\n\ \ Quicksort\ sorting\ algorithm(Hoare,\ 1963).\ \ \r\n\ \ It\ uses\ the\ Weiss\ partition\ algorithm,\ \ \r\n\ \ with\ a\ median\ of\ 3\ to\ compute\ the\ pivot.\ \r\n\ \ \ \r\n\ \ @param\ a\ Its\ elements\ implement\ the\ Comparable\ interface\ \r\n
+comment10.params=v1\ v2
+comment10.target=java.lang.Comparable[]\ merge2(java.lang.Comparable[],\ java.lang.Comparable[])
+comment10.text=\ \r\n\ Returns\ the\ merge\ of\ v1\ and\ v2\ arrays,\ which\ are\ both\ already\ sorted\ in\ ascending\ order\ \r\n\ \ \r\n\ @param\ v1\ \ Its\ elements\ implement\ the\ Comparable\ interface\ \r\n\ @param\ v2\ \ Its\ elements\ implement\ the\ Comparable\ interface\ \r\n\ @return\ T[],\ the\ outcome\ array\ after\ merging\ v1\ and\ v2\ \r\n
+comment11.params=a\ b
+comment11.target=boolean\ sonIguales(java.lang.Comparable[],\ java.lang.Comparable[])
+comment11.text=\ \ \r\n\ \ Checks\ if\ arrays\ a\ and\ b\ are\ equals\ comparing\ element\ by\ element.\ \r\n\ \ \ \r\n\ \ @param\ a\ \ Its\ elements\ implement\ the\ Comparable\ interface\ \r\n\ \ @return\ boolean,\ the\ result\ of\ the\ comparison\ \r\n
+comment2.params=a\ izq\ der
+comment2.target=void\ quickSort(java.lang.Comparable[],\ int,\ int)
+comment3.params=a\ ind1\ ind2
+comment3.target=void\ intercambiar(java.lang.Object[],\ int,\ int)
+comment4.params=a\ izq\ der
+comment4.target=java.lang.Comparable\ mediana3(java.lang.Comparable[],\ int,\ int)
+comment5.params=v
+comment5.target=void\ mergeSort1(java.lang.Comparable[])
+comment5.text=\ \r\n\ Sort\ the\ array\ v\ in\ ascending\ order.\ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n
+comment6.params=v\ i\ f
+comment6.target=void\ mergeSort1(java.lang.Comparable[],\ int,\ int)
+comment6.text=\ \r\n\ IF\ i<\=f\:\ sorts\ the\ subarray\ v[i,\ f]\ in\ ascending\ order.\ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n\ @param\ i\ \ Lower\ end\ of\ the\ interval\ to\ be\ ordered\ \r\n\ @param\ f\ \ Upper\ end\ of\ the\ range\ to\ be\ ordered\ \r\n
+comment7.params=v\ i\ f\ m
+comment7.target=void\ merge1(java.lang.Comparable[],\ int,\ int,\ int)
+comment7.text=\ \r\n\ Internally\ merges\ subarrays\ v[i,\ m]\ and\ v[m\ +\ 1,\ f],\ \ \r\n\ which\ are\ both\ sorted\ in\ ascending\ order.\ \ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n\ @param\ i\ \ Extremo\ inferior\ del\ intervalo\ a\ mezclar\ \r\n\ @param\ f\ \ Extremo\ superior\ del\ intervalo\ a\ mezclar\ \r\n
+comment8.params=v
+comment8.target=void\ mergeSort2(java.lang.Comparable[])
+comment8.text=\ \r\n\ Sort\ the\ array\ v\ in\ ascending\ order.\ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n\ \ \ \ \ \ \ \ EDA\ \u2013\ Year\ 2021/22\ \ Pasqual\ Mart\u00ED\ \r\n
+comment9.params=v\ i\ f
+comment9.target=java.lang.Comparable[]\ mergeSort2(java.lang.Comparable[],\ int,\ int)
+comment9.text=\ \r\n\ IF\ i<\=f\:\ sorts\ the\ subarray\ v[i,\ f]\ in\ ascending\ order.\ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n\ @param\ i\ \ Lower\ end\ of\ the\ interval\ to\ be\ ordered\ \r\n\ @param\ f\ \ Upper\ end\ of\ the\ range\ to\ be\ ordered\ \r\n\ @return\ T[],\ the\ sorted\ v[i,\ f]\ array\ \ \r\n
+numComments=12
