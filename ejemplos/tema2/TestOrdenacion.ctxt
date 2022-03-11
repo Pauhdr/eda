@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=TestOrdenacion
+comment0.text=\r\n\ The\ class\ TestOrdenacion\ allows\ to\ test\ and\ time\r\n\ the\ generic-array\ sorting\ methods\ defined\ in\r\n\ the\ class\ librerias.util.Ordenacion.\r\n\r\n\ @author\ (EDA)\r\n\ @version\ (Year\ 2019-2020)\r\n
+comment1.params=
+comment1.target=boolean\ comprobar()
+comment1.text=\r\n\ Checks\ the\ correctness\ of\ method\ mergeSort2\ from\r\n\ the\ Ordenacion\ class,\ basing\ the\ analysis\ on\ the\ correctness\r\n\ of\ the\ quicksort\ method.\r\n
+comment2.params=
+comment2.target=void\ temporizar()
+comment2.text=\r\n\ Timing\ of\ Integer\ arrays\ sorted\ by\ methods\ mergeSort1,\r\n\ mergeSort2\ and\ quickSort\ from\ class\ Ordenacion.\r\n
+comment3.params=talla
+comment3.target=java.lang.Integer[]\ crearAleatorioInteger(int)
+comment3.text=\r\n\ Retuns\ an\ array\ containing\ talla\ randomly\ generated\ Integer.\r\n\r\n\ @param\ talla\ Size\ of\ the\ returned\ array\r\n\ @return\ Integer[]\r\n\ \ \ \ EDA\ \u2013\ Year\ 2021/22\ Pasqual\ Mart\u00ED\r\n
+comment4.params=
+comment4.target=void\ temporizarString()
+comment4.text=\r\n\ Timing\ of\ String\ arrays\ sorted\ by\ methods\ mergeSort1,\r\n\ mergeSort2\ and\ quickSort\ from\ class\ Ordenacion.\r\n
+comment5.params=talla\ n
+comment5.target=java.lang.String[]\ crearAleatorioString(int,\ int)
+comment5.text=\r\n\ Returns\ an\ array\ containing\ talla\ random\ Strings\ with\r\n\ the\ same\ first\ n\ characters.\r\n\r\n\ @param\ talla\ Size\ of\ the\ returned\ array\r\n\ @param\ n\ Number\ of\ equal\ initial\ characters\r\n\ @return\ String[]\r\n
+numComments=6
