@@ -24,13 +24,14 @@ public class AnalizadorDeTexto {
         }
     }
     
-    /** devuelve el nº de palabras con frecuencia de aparición mayor   
+    /** devuelve el nï¿½ de palabras con frecuencia de apariciï¿½n mayor   
      *  que n que aparecen en el texto tratado por un Analizador.   
-     *  Así, por ejemplo, si n=0 devuelve el número de palabras distintas  
-     *  que aparecen en el texto; si n=1 devuelve el número de palabras  
+     *  Asï¿½, por ejemplo, si n=0 devuelve el nï¿½mero de palabras distintas  
+     *  que aparecen en el texto; si n=1 devuelve el nï¿½mero de palabras  
      *  repetidas que tiene el texto, etc.
      */
     public int frecuenciaMayorQue(int n) {
         // COMPLETAR 
+        return 0;
     }  
 }

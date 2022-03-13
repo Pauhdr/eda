@@ -31,12 +31,12 @@ public class Test2Map {
 		// ?De que tipos son? 
         Map<String, String> m = new TablaHash<String, String>(texto.length());
 
-        // Construcción del Map, via insercion/actualizacion de sus Entradas, 
+        // Construcciï¿½n del Map, via insercion/actualizacion de sus Entradas, 
         // a partir de la frase leida: 
-        // uso del método split de String con separador " " (uno o mas)
+        // uso del mï¿½todo split de String con separador " " (uno o mas)
         String[] palabrasDelTexto = texto.split(" +");
         for (int i = 0; i < palabrasDelTexto.length; i++) 
-            // OJO: LO MÁS BARATO SERIA 
+            // OJO: LO Mï¿½S BARATO SERIA 
 		    // d.insertar(palabrasDelTexto[i].toLowerCase(), 
 		    // palabrasDelTexto[i].toLowerCase());
             m.insertar(palabrasDelTexto[i].toLowerCase(), ""); 
@@ -45,6 +45,6 @@ public class Test2Map {
         // que NO son las Entradas del Map sino SOLO sus claves
         ListaConPI<String> deClaves = m.claves();
         System.out.println("Palabras distintas que aparecen en el texto, "
-			+ "i.e. Claves del Map:" + deClaves.length);
+			+ "i.e. Claves del Map:" + deClaves.talla());
     } 
 }

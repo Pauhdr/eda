@@ -1,19 +1,20 @@
 package ejemplos.tema3;
 
-import librerias.estructurasDeDatos.modelos.*; 
-import librerias.estructurasDeDatos.deDispersion.*;
+//import librerias.estructurasDeDatos.modelos.*; 
+//import librerias.estructurasDeDatos.deDispersion.*;
 import librerias.excepciones.*;
 import java.util.Date;
 
 public class ModuloAutorizacion {
-    private Map<Usuario, Date> m;
+    //private Map<Usuario, Date> m;
     
     public ModuloAutorizacion(int n) {
         // COMPLETAR
     }
     
     public Date fechaAcceso(String nombre, String pwd) {
-        // COMPLETAR  
+        // COMPLETAR 
+        return new Date(); 
     }
     
     public void registrarUsuario(String nombre, String pwd) 
@@ -23,5 +24,6 @@ public class ModuloAutorizacion {
     
     public boolean estaAutorizado(String nombre, String pwd) {
         // COMPLETAR 
+        return false;
     }
 }

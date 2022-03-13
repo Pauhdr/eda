@@ -19,6 +19,7 @@ public class TablaHash<C, V> implements Map<C, V> {
      *  (valor por defecto en la clase java.util.HashMap) 
      */
     public static final double FACTOR_DE_CARGA = 0.75;
+    public static boolean REHASHING = false;
     
     /** TIENE UN array de Listas Con PI de Tipo Generico EntradaHashLPI<C, V>:
      *  - elArray[h] representa una cubeta, 
@@ -138,7 +139,23 @@ public class TablaHash<C, V> implements Map<C, V> {
     // RECUERDA: este metodo tiene 
     // un coste INDEPENDIENTE de la talla del problema
     // NO hace falta calcular con un bucle la longitud media de las cubetas!!!
-    public final double factorDeCarga() {
+    public final double factorCarga() {
+        return 0; /*CAMBIAR / COMPLETAR*/
+    }
+
+    public final double desviacionTipica() {
+        return 0; /*CAMBIAR / COMPLETAR*/
+    }
+
+    public final int numeroDeRH() {
+        return 0; /*CAMBIAR / COMPLETAR*/
+    }
+
+    public final double costeMLocalizar() {
+        return 0; /*CAMBIAR / COMPLETAR*/
+    }
+
+    public final double histograma() {
         return 0; /*CAMBIAR / COMPLETAR*/
     }
     
