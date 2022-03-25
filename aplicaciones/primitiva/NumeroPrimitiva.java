@@ -8,7 +8,7 @@ import java.util.Random;
  *  @version Febrero 2019
  */
 
-public class NumeroPrimitiva /* COMPLETAR */ {
+public class NumeroPrimitiva implements Comparable {
     
     // Un NumeroPrimitiva TIENE UN int en el intervalo [1, 49]
     private int numero;
@@ -21,6 +21,10 @@ public class NumeroPrimitiva /* COMPLETAR */ {
         Random r = new Random();
         numero = r.nextInt(49) + 1;
     }
+
+    public int numero(){
+        return this.numero;
+    }
     
     /**
      * Comprueba si un (this) NumeroPrimitiva es igual a otro, 
@@ -32,6 +36,9 @@ public class NumeroPrimitiva /* COMPLETAR */ {
      */
     
     /* COMPLETAR EL METODO equals */
+    public boolean equals(NumeroPrimitiva other){
+        return this.numero == other.numero();
+    }
     
     
     /**
@@ -44,7 +51,17 @@ public class NumeroPrimitiva /* COMPLETAR */ {
      */
     
     /* COMPLETAR EL METODO compareTo */
-    
+    public int compareTo(NumeroPrimitiva other){
+        if(this.numero > other.numero()){
+            return 1;
+        }
+        if(this.numero < other.numero()){
+            return -1;
+        }
+        if(this.numero == other.numero()){
+            return 0;
+        }
+    }
     
     /**
      * Devuelve el String que representa un (this) NumeroPrimitiva 

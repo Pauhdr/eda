@@ -28,9 +28,11 @@ public class ApuestaPrimitiva {
      *                 (true) o no (false).           
      */
     public ApuestaPrimitiva(boolean ordenada) {
-        
-        /* COMPLETAR */
-        
+        if(ordenada){
+            combinacion = new LEGListaConPIOrdenada<NumeroPrimitiva>();
+        }else{
+            combinacion = new LEGListaConPI<NumeroPrimitiva>();
+        }
     }
     
     /**
@@ -45,9 +47,12 @@ public class ApuestaPrimitiva {
      *          o -1 en caso contrario
      */
     protected int posicionDe(NumeroPrimitiva n) {
-        
-        /* COMPLETAR */
-        
+        int i=0;
+        for(this.combinacion.inicio();!this.combinacion.esFin();this.combinacion.siguiente()){
+            if(n.equals(this.combinacion.recuperar())) return i;
+            i++;
+        } 
+        return -1;
     }
     
     /**
@@ -57,8 +62,10 @@ public class ApuestaPrimitiva {
      * @return el String con la ApuestaPrimitiva en el formato texto dado. 
      */
     public String toString() {
-        
-        /* COMPLETAR */
-        
+        String res="";
+        for(this.combinacion.inicio();!this.combinacion.esFin();this.combinacion.siguiente()){
+            res+=this.combinacion.recuperar()+", ";
+        }
+        return res;
     }
 }
