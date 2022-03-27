@@ -1,4 +1,4 @@
-package ejemplos.biblioteca;
+package aplicaciones.biblioteca;
 
 import librerias.estructurasDeDatos.deDispersion.TablaHash;
 import librerias.estructurasDeDatos.modelos.ListaConPI;

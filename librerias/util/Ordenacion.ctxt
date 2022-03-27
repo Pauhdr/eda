@@ -27,7 +27,7 @@ comment7.target=void\ merge1(java.lang.Comparable[],\ int,\ int,\ int)
 comment7.text=\ \r\n\ Internally\ merges\ subarrays\ v[i,\ m]\ and\ v[m\ +\ 1,\ f],\ \ \r\n\ which\ are\ both\ sorted\ in\ ascending\ order.\ \ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n\ @param\ i\ \ Extremo\ inferior\ del\ intervalo\ a\ mezclar\ \r\n\ @param\ f\ \ Extremo\ superior\ del\ intervalo\ a\ mezclar\ \r\n
 comment8.params=v
 comment8.target=void\ mergeSort2(java.lang.Comparable[])
-comment8.text=\ \r\n\ Sort\ the\ array\ v\ in\ ascending\ order.\ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n\ \ \ \ \ \ \ \ EDA\ \u2013\ Year\ 2021/22\ \ Pasqual\ Mart\u00ED\ \r\n
+comment8.text=\ \r\n\ Sort\ the\ array\ v\ in\ ascending\ order.\ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n\ \ \ \ \ \ \ \ EDA\ \uFFFD\ Year\ 2021/22\ \ Pasqual\ Mart\uFFFD\ \r\n
 comment9.params=v\ i\ f
 comment9.target=java.lang.Comparable[]\ mergeSort2(java.lang.Comparable[],\ int,\ int)
 comment9.text=\ \r\n\ IF\ i<\=f\:\ sorts\ the\ subarray\ v[i,\ f]\ in\ ascending\ order.\ \r\n\ \ \r\n\ @param\ v\ \ Its\ elements\ must\ implement\ the\ Comparable\ interface\ \r\n\ @param\ i\ \ Lower\ end\ of\ the\ interval\ to\ be\ ordered\ \r\n\ @param\ f\ \ Upper\ end\ of\ the\ range\ to\ be\ ordered\ \r\n\ @return\ T[],\ the\ sorted\ v[i,\ f]\ array\ \ \r\n

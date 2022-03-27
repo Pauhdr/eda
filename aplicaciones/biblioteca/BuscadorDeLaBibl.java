@@ -1,4 +1,4 @@
-package ejemplos.biblioteca;
+package aplicaciones.biblioteca;
 
 import librerias.estructurasDeDatos.modelos.Map;
 import librerias.estructurasDeDatos.modelos.ListaConPI;
@@ -50,6 +50,7 @@ public class BuscadorDeLaBibl {
     // debe cambiarse si procede
     protected static String separadores = 
        "[[ ]*|[,]*|[\\.]*|[\t]*|[:]*|[;]*|[(]*|[)]*|[/]*|[!]*|[?]*|[¿]*|[“]*|[”]*|[+]*]+";
+       
 
     // UN int maxTerminos, el numero de terminos que, como maximo, contienen  
     // los libros de listaLibros. Su valor por defecto es el que figura a 
@@ -201,10 +202,11 @@ public class BuscadorDeLaBibl {
      */
     public ListaConPI<Termino> hapax() {
         /* COMPLETAR */
+        ListaConPI<Termino> res=new LEGListaConPI<Termino>();
         ListaConPI<Termino> keys=this.index.claves();
         for(keys.inicio();!keys.esFin();keys.siguiente()){
-            if(this.index.recuperar(keys.recuperar()).talla()!=1) keys.eliminar();
+            if(index.recuperar(keys.recuperar()).talla()==1) res.insertar(keys.recuperar());
         }
-        return keys;
+        return res;
     }
 }    

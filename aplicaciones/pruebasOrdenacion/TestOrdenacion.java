@@ -32,12 +32,13 @@ public class TestOrdenacion {
         
         // Ordenacion por Quick Sort de a1:
         //COMPLETAR
-
+        Ordenacion.quickSort(a1);
         // Ordenacion por Merge Sort (version 2) de a2:   
         //COMPLETAR        
-        
+        Ordenacion.mergeSort2(a2);
         // Son iguales a1 (quickSort) y a2 (mergeSort2)?
-        // COMPLETAR return 
+        // COMPLETAR return
+        return Ordenacion.sonIguales(a1,a2);
     }
 
     /**
@@ -74,7 +75,10 @@ public class TestOrdenacion {
                 
                 //  A completar:  
                 //  Temporizacion de mergeSort2
-                
+                t1 = System.nanoTime();
+                Ordenacion.mergeSort2(aux2);
+                t2 = System.nanoTime();
+                tacum2 += t2 - t1;
                 
                 t1 = System.nanoTime();
                 Ordenacion.quickSort(aux3);
@@ -140,7 +144,11 @@ public class TestOrdenacion {
                 
                 // A completar: 
                 // Temporizacion de mergeSort2                               
-                                                                
+                t1 = System.nanoTime();
+                Ordenacion.mergeSort2(aux2);
+                t2 = System.nanoTime();
+                tacum2 += t2 - t1; 
+                
                 t1 = System.nanoTime();
                 Ordenacion.quickSort(aux3);
                 t2 = System.nanoTime();
@@ -165,17 +173,19 @@ public class TestOrdenacion {
      * @return String[]
      */    
     public static String[] crearAleatorioString(int talla, int n) {
-        /*MODIFICAR*/
-        return null;
+        String[] res = new String[talla];
+        GeneradorDeString g = new GeneradorDeString(n);
+        for(int i=0; i<talla; i++){
+            res[i]=g.generar();
+        }
+        return res;
     }
     
     public static void main(String[] args) {
         boolean okMS2 = comprobar();
         if (okMS2) {
-            System.out.println("Para temporizar Integers se debe ejecutar "
-                               + "el metodo temporizar()");
-            System.out.println("Para temporizar Strings se debe ejecutar "
-                               + "el metodo temporizarString()");
+            temporizar();
+            temporizarString();
         }
         else {
             System.out.println("ERROR en mergeSort2: no ordena correctamente\n"

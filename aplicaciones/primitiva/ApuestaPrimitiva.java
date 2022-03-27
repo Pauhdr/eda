@@ -33,6 +33,14 @@ public class ApuestaPrimitiva {
         }else{
             combinacion = new LEGListaConPI<NumeroPrimitiva>();
         }
+        
+        while(combinacion.talla() != 6){
+            NumeroPrimitiva n = new NumeroPrimitiva();
+            if(posicionDe(n) == -1) {
+
+                combinacion.insertar(n);
+            }
+        }
     }
     
     /**
@@ -62,10 +70,23 @@ public class ApuestaPrimitiva {
      * @return el String con la ApuestaPrimitiva en el formato texto dado. 
      */
     public String toString() {
-        String res="";
-        for(this.combinacion.inicio();!this.combinacion.esFin();this.combinacion.siguiente()){
-            res+=this.combinacion.recuperar()+", ";
+        StringBuilder s = new StringBuilder();
+        ListaConPI<NumeroPrimitiva> comb = combinacion;
+        comb.inicio();
+        int coma = 0;
+        while(!comb.esFin()){
+            if(coma >= 5){s.append((comb.recuperar()).toString());}
+            else{s.append((comb.recuperar()).toString() + ", ");}
+            comb.siguiente();
+            coma++;
+
         }
-        return res;
+
+        return s.toString();
+        /*String res="";
+        for(this.combinacion.inicio();!this.combinacion.esFin();this.combinacion.siguiente()){
+            res+=(this.combinacion.recuperar()).toString()+", ";
+        }
+        return res;*/
     }
 }

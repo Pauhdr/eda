@@ -1,4 +1,4 @@
-package ejemplos.biblioteca;
+package aplicaciones.biblioteca;
 /*
  * Termino: clase de la Clave del Map que representa un termino del 
  * Indice Analitico de una Biblioteca Digital.
@@ -60,8 +60,8 @@ public class Termino {
         if (res != 0) { return res; }
         int n = this.termino.length()-1;
         for (int i =0; i<=n; i++){
-		//res+=this.termino.charAt(i)* Math.pow(this.baseHashCode, n-i);            
-		res=this.baseHashCode*res + this.termino.charAt(i);
+            //res+=this.termino.charAt(i)* Math.pow(this.baseHashCode, n-i);            
+            res=this.baseHashCode*res + this.termino.charAt(i);
         }
         
         this.valorHash = res;
@@ -69,15 +69,26 @@ public class Termino {
     }
 
     public String termino(){
-    	return this.termino;
+        return this.termino;
     }
    
     /** Comprueba si un (this) Termino es igual a otro de forma  
      *  eficiente, i.e. SOLO ejecuta el metodo equals de String 
      *  cuando los valores Hash de uno y otro Termino son iguales
      */
-    public boolean equals(Object otro) {
-        return false;// this.valorHash == otro.hashCode() ? this.termino.equals(otro.termino()) : false;
+    public boolean equals(Object o) {
+        if (o instanceof Termino ) {
+            Termino t = (Termino) o;
+            if (!(this.termino.equals(t.termino))) {
+                return false;
+            }
+            if (this.hashCode() != t.hashCode()) {
+                return false;
+            }
+
+            return true;
+        }
+        return false;
     }
     
     /** Devuelve un String que representa un Termino en cierto formato texto */

@@ -14,10 +14,10 @@ import librerias.estructurasDeDatos.modelos.ListaConPI;
  * @param <E> tipo de datos de la estructura
  */
 
-public class LEGListaConPIOrdenada<E> extends LEGListaConPI<E> {
+public class LEGListaConPIOrdenada<E extends Comparable<E>> extends LEGListaConPI<E> {
 
     /** construye una Lista Con PI vacia **/
-    public LEGListaConPIOrdenda() {
+    public LEGListaConPIOrdenada() {
         super();
     }
     
@@ -26,9 +26,9 @@ public class LEGListaConPIOrdenada<E> extends LEGListaConPI<E> {
      *
      * @param e Elemento a insertar.
      **/
-    @override
+
     public void insertar(E e) { 
-        for(this.elArray.inicio(); !elArray.esFin() && this.elArray.recuperar()<e;elArray.siguiente()){}
+        for(this.inicio(); !this.esFin() && this.recuperar().compareTo(e)<0;this.siguiente()){}
         NodoLEG<E> nuevo = new NodoLEG<E>(e, ant.siguiente);
         ant.siguiente = nuevo;
         if (nuevo.siguiente == null) ult = nuevo;
