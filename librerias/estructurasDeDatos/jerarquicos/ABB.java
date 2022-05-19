@@ -13,6 +13,7 @@ import librerias.util.Ordenacion;
  * @version Marzo 2022
  **/
 public class ABB<E extends Comparable<E>> {
+
     // Atributo de la clase ABB
     protected NodoABB<E> raiz;
 
@@ -205,6 +206,20 @@ public class ABB<E extends Comparable<E>> {
      * @return true si esta vacio, false en caso contrario
      */
     public boolean esVacio() { return raiz == null; }
+
+    /**
+     * Devuelve el padre del primer nodo que contiene e
+     * @return data del padre o null si no tiene padre
+     */
+    public E padreDe(E e){
+      if(raiz != null && raiz.dato.compareTo(e)==0) return null;
+      return padreDe(raiz, e);
+    }
+
+    private E padreDe(NodoABB<E> n, E e){
+        if(n==null) return null;
+        if(n.izq !=null && n.izq.dato.compareTo(e)==0) ;
+    }
   
     /**
      * Recorrido inOrden del ABB
@@ -336,5 +351,3 @@ public class ABB<E extends Comparable<E>> {
             toArrayInOrden(v, actual.der, auxPos);    
         }
     }
-
-}
