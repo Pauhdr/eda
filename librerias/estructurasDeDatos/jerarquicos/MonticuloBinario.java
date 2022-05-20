@@ -42,8 +42,8 @@ public class MonticuloBinario<E extends Comparable<E>>
         // PASO 2. Insertar e en su posicion de insercion ordenada
         elArray[posIns] = e;
     }
-	
-	protected int reflotar(E e, int posIns) {
+    
+    protected int reflotar(E e, int posIns) {
         while (posIns > 1 && e.compareTo(elArray[posIns / 2]) < 0) { 
             elArray[posIns] = elArray[posIns / 2]; 
             posIns = posIns / 2;

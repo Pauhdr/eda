@@ -24,7 +24,7 @@ public interface ColaPrioridad<E extends Comparable<E>> {
      */
     E  recuperarMin();
     
-    /** comprueba si una CP esta vacía 
+    /** comprueba si una CP esta vaca 
      */
     boolean esVacia();
 }

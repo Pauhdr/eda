@@ -14,7 +14,7 @@ public interface Lista<E> {
     
 // metodos Consultores del estado de la Lista:
     /** SII 0<=i<talla(): 
-     * devuelve el elemento que ocupa la posición ide una Lista 
+     * devuelve el elemento que ocupa la posicin ide una Lista 
      */
     E recuperar(int i);
     

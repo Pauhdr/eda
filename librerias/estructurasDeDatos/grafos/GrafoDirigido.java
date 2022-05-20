@@ -63,7 +63,7 @@ public class GrafoDirigido extends Grafo {
         for (l.inicio(); !l.esFin(); l.siguiente()) {
             if (l.recuperar().getDestino() == j) { return true; }
         } 
-		return false;   
+        return false;   
     }
     
     /** Devuelve el peso de la arista (i,j) de un grafo, 
@@ -153,8 +153,8 @@ public class GrafoDirigido extends Grafo {
         }
         return gradoMax;
     }
-	
-	/** paginas 28 y 29, tema 6 */
+    
+    /** paginas 28 y 29, tema 6 */
     public int[] toArrayDFS() {
         int[] res = new int[numVertices()]; 
         ordenVisita = 0;
@@ -175,8 +175,8 @@ public class GrafoDirigido extends Grafo {
             if (visitados[w] == 0) toArrayDFS(w, res);
         }
     }  
-	
-	/** paginas 34 y 35, tema 6 */
+    
+    /** paginas 34 y 35, tema 6 */
     public int[] toArrayBFS() {
         int[] res = new int[numVertices()]; 
         visitados = new int[numVertices()];
@@ -205,8 +205,8 @@ public class GrafoDirigido extends Grafo {
             } 
         }
     }
-	
-	/** paginas 40, 41 y 42, tema 6 */
+    
+    /** paginas 40, 41 y 42, tema 6 */
     // atributos "auxiliares"
     protected double[] distanciaMin; 
     protected int[] caminoMin; 
@@ -305,8 +305,8 @@ public class GrafoDirigido extends Grafo {
             }
         }
     }
-	
-	/** pagina 60, tema 6 */
+    
+    /** pagina 60, tema 6 */
     /* SII el Grafo es un DAG */
     public int[] ordenTopologicoDFS() {
         int[] res = new int[numVertices()]; 
@@ -384,5 +384,5 @@ public class GrafoDirigido extends Grafo {
         res[numVertices() - 1 - ordenVisita] = v; 
         ordenVisita++;
         return aristaHA;
-    }	
+    }    
 }

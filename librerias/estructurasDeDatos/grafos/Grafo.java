@@ -1,6 +1,7 @@
 package librerias.estructurasDeDatos.grafos;
 
 import librerias.estructurasDeDatos.modelos.*;
+import librerias.estructurasDeDatos.lineales.*;
 
 /** Clase abstracta Grafo
  *
@@ -47,20 +48,20 @@ public abstract class Grafo {
     public abstract boolean existeArista(int i, int j);
     
     /** Devuelve el peso de la arista (i,j) de un grafo, 
-	 *  0 si dicha arista no esta en el grafo.
+     *  0 si dicha arista no esta en el grafo.
      *  @param i    Vertice origen
      *  @param j    Vertice destino
      *  @return double Peso de la arista (i,j), 0 si no existe.
      */
     public abstract double pesoArista(int i, int j);
     
-    /** Si no está, inserta la arista (i, j) en un grafo no Ponderado.
+    /** Si no est, inserta la arista (i, j) en un grafo no Ponderado.
      *  @param i    Vertice origen
      *  @param j    Vertice destino
      */
     public abstract void insertarArista(int i, int j);
     
-    /** Si no está, inserta la arista (i, j) de peso p en un grafo Ponderado.
+    /** Si no est, inserta la arista (i, j) de peso p en un grafo Ponderado.
      *  @param i    Vertice origen
      *  @param j    Vertice destino
      *  @param p    Peso de la arista (i,j)
@@ -92,4 +93,87 @@ public abstract class Grafo {
         }
         return res;      
     }  
+    
+    public int[] toArrayBFS() {
+        int[] res = new int[numVertices()];
+        visitados = new int[numVertices()]; 
+        ordenVisita = 0;  
+        q = new ArrayCola<Integer>();
+        for (int  i = 0; i < numVertices(); i++) {
+            if (visitados[i] == 0) { toArrayBFS(i, res); }
+        }
+        return res;
+    }
+    
+    // Recorrido BFS del vertice origen, que almacena en res
+    // su resultado
+    protected void toArrayBFS(int origen, int[] res) { 
+        res[ordenVisita++] = origen;
+        visitados[origen] = 1;
+        q.encolar(origen);
+        while (!q.esVacia()) {
+            int u = q.desencolar().intValue(); 
+            ListaConPI<Adyacente> l = adyacentesDe(u); 
+            for (l.inicio(); !l.esFin(); l.siguiente()) {
+                Adyacente a = l.recuperar(); 
+                if (visitados[a.destino] == 0) {
+                    res[ordenVisita++] = a.destino;
+                    visitados[a.destino] = 1;
+                    q.encolar(a.destino);
+                }
+            }  
+        }
+    }
+    
+    /** PRECONDICION: !this.esDirigido()
+      * Devuelve un subconjunto de aristas que conectan todos los vertices
+      * de un grafo No Diridigo y Conexo, o null si el grafo no es Conexo.
+      *  
+      * @return Arista[], array con las numV - 1 aristas que conectan  
+      *                   los numV vertices del grafo, o null si el grafo 
+      *                   no es Conexo
+     */ 
+    public Arista[] arbolRecubrimientoBFS() {
+        Arista[] res = new Arista[numVertices()-1];
+        visitados = new int[numVertices()]; 
+        ordenVisita = 0;  
+        q = new ArrayCola<Integer>();
+        for (int  i = 0; i < numVertices(); i++) {
+            if (visitados[i] == 0) { arbolRecubrimientoBFS(i, res); }
+        }
+        if (ordenVisita != (numVertices()-1)) return null;
+        
+        return res;  
+    }
+    
+    protected void arbolRecubrimientoBFS(int origen, Arista[] res) { 
+        visitados[origen] = 1;
+        q.encolar(origen);
+        while (!q.esVacia()) {
+            int u = q.desencolar().intValue(); 
+            ListaConPI<Adyacente> l = adyacentesDe(u); 
+            for (l.inicio(); !l.esFin(); l.siguiente()) {
+                Adyacente a = l.recuperar(); 
+                if (visitados[a.destino] == 0) {
+                    res[ordenVisita++] = new Arista(u, a.destino, a.peso);
+                    visitados[a.destino] = 1;
+                    q.encolar(a.destino);
+                }
+            }  
+        }
+    }
+    
+    /** PRECONDICION: !this.esDirigido()
+      * Devuelve un subconjunto de aristas que, con coste minimo,  
+      * conectan todos los vertices de un grafo No Dirigido y Conexo, 
+      * o null si el grafo no es Conexo.
+      * 
+      * @return Arista[], array con las numV - 1 aristas que conectan 
+      *                   los numV vertices con coste minimo, o null 
+      *                   si el grafo no es Conexo
+     */ 
+    public Arista[] kruskal() {       
+        /*COMPLETAR EN LA SEGUNDA SESION*/
+        return null;
+    }
 }

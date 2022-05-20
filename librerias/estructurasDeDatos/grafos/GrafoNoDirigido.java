@@ -7,8 +7,8 @@ package librerias.estructurasDeDatos.grafos;
  *  mediante Listas de Adyacencia
  *  
  *  un grafo No Dirigido ES UN Grafo Dirigido tal que 
- *  si la Arista (i, j) está presente en la Lista de Adyacencia de i 
- *  entonces también lo está la Arista (j, i) en la de j
+ *  si la Arista (i, j) es presente en la Lista de Adyacencia de i 
+ *  entonces tambin lo est la Arista (j, i) en la de j
  */
 
 public class GrafoNoDirigido extends GrafoDirigido {
